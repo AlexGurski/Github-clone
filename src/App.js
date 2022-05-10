@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "./modules/header";
-import { MainPage } from "./pages/mainPage";
+import { StartPage } from "./pages/startPage/startPage";
+import { FindedPage } from "./pages/findedPage/findedPage";
 import './StylesGlobal/style.css'
 import {Routes, Route, Link} from 'react-router-dom'
 function App() {
@@ -8,9 +9,9 @@ function App() {
    <>
       <Header/>
       <Routes>
-        <Route path="/" element={ <MainPage/>}>
-         
-        </Route>
+        <Route path="/" element={ <StartPage/>}/>
+        <Route path="/:id" element={ <FindedPage/> }/>
+
       </Routes>
    </>
   );
