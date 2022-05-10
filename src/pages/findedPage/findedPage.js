@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import './style.css'
+import './finding-style.css'
 import { useParams} from 'react-router-dom'
 import { NotFound } from "./modules/notFound";
+import { Found } from "./modules/Found";
 export const  FindedPage = () => {
     const {id} =  useParams();
     const [status, setStatus] = useState('')
@@ -12,17 +13,14 @@ export const  FindedPage = () => {
             .then(response => {
                 if (response.ok) {
                   return response.json()
-                } else{
-                  return false
-                }
+                } 
               })
             .then(data => setStatus(data));    
     },[id])
 
     return(
         <div className="accept">
-            {status?console.log(status):<NotFound/>}
-           
+            {status?<Found user={status}/>:<NotFound/>}
         </div>
     )
 }

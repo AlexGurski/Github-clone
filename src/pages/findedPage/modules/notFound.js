@@ -1,18 +1,13 @@
 import React from "react";
-import '../style.css'
-
+import '../finding-style.css'
+import {RiUserLine} from 'react-icons/ri'
 export const  NotFound = () => {      
     return(
-        <>
-            <div className="start">
-                <div className="start_group">
-                    <div className="unfound">
-                        <div></div>
-                        <div></div>
-                    </div>
+            <div className="container ">
+                <div className="container_group">
+                    <RiUserLine className="person"/>
                     <span>User not found</span>
                 </div>
             </div>
-        </>
     )
 }

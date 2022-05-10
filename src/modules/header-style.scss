@@ -11,6 +11,7 @@
         }
         &_textbox{
             width: 500px;
+            max-width: calc(100% - 120px);
             height: 40px;
             margin-left: 22px;
             position: relative;
@@ -23,6 +24,7 @@
             }
             input{
                 width: 100%;
+                max-width: calc(100% - 60px);
                 height: 100%;
                 border-radius: 6px;
                 border: none;

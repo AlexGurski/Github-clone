@@ -1,0 +1,17 @@
+.start{
+    width: 100%;
+    height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_group{
+        width: 210px;
+        height: 196px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+}
