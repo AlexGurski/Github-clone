@@ -2,6 +2,7 @@
     width: 100%;
     height: calc(100vh - 72px);
 }
+
 .found{
     width: 100%;
     height: 100%;
@@ -58,8 +59,15 @@
     }
     &_repo{
         width: 100%;
-        height: 100%;
-        border: 1px solid red;        
+        height: 100%;      
         padding: 28px 0 0 96px;
+    }
+}
+.repository{
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+    &_item{
+        background-color: white;
     }
 }
