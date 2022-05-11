@@ -1,17 +1,65 @@
-.start{
+.accept{
     width: 100%;
     height: calc(100vh - 72px);
+}
+.found{
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &_group{
-        width: 210px;
-        height: 196px;
+    padding: 0 56px;
+    &_user{
+        margin-top: 55px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 292.08px;
+        height: 431.98px;
+        &_name{
+            padding: 29px 0 12px 0;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 130%;
+            color: #000000;
+        }
+        &_login{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #0064EB;
+            cursor:pointer;
+            text-decoration: none;
+        }
+        &_folow{
+            margin-top: 25px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #000000;
+            display: flex;
+            justify-content: space-between;
+            span{
+                display: flex;
+                align-items: center;
+                svg{
+                    margin-right: 5px;
+                }
+            }
+        }
+        img{
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+        }
     }
-  
+    &_repo{
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;        
+        padding: 28px 0 0 96px;
+    }
 }

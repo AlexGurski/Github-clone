@@ -4,6 +4,7 @@ import { useParams} from 'react-router-dom'
 import { NotFound } from "./modules/notFound";
 import { Found } from "./modules/Found";
 export const  FindedPage = () => {
+    
     const {id} =  useParams();
     const [status, setStatus] = useState('')
 
