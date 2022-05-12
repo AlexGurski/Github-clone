@@ -20,7 +20,7 @@ export const  Found = (props) => {
             username: login,
             per_page:4,
             page:page,
-            sort:'updated',
+            sort:'pushed',
           })
           setRepository(response.data)
            } catch (error) {

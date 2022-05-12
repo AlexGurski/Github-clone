@@ -5,7 +5,7 @@ export const  NotFoundRepo = () => {
     return(
             <div className="container ">
                 <div className="container_group">
-                    <FaRegWindowClose width={'100%'} height={'100%'} className="person"/>
+                    <FaRegWindowClose  height={'100%'} className="person"/>
                     <span>Repository list is empty</span>
                 </div>
             </div>
