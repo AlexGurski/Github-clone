@@ -4,20 +4,29 @@ import { useParams} from 'react-router-dom'
 import { NotFound } from "./modules/notFound";
 import { Found } from "./modules/Found";
 import { Preloader } from "../../modules/preloader";
+import { Octokit } from "octokit";
 export const  FindedPage = () => {
     
     const {id} =  useParams();
     const [status, setStatus] = useState('')
-
-    useEffect(()=>{
-        setStatus('load')
-            fetch(`https://api.github.com/users/${id}`)
-            .then(response => {
-                if (response.ok) {
-                  return response.json()
-                } 
-              })
-            .then(data => setStatus(data));    
+    const octokit = new Octokit(/*{ auth: `personal-access-token123` }*/);
+ 
+      const  search = async (id) =>{
+        try {
+        const response = await octokit.request(`GET /users/${id}`, {
+            username: id,
+            per_page:100,
+            page:2
+          })
+          setStatus(response.data)
+        } catch (error) {
+            setStatus(false)
+            console.error(error) 
+        }
+      }
+     useEffect(()=>{
+         setStatus('load');
+         search(id)
     },[id])
 
     return(
