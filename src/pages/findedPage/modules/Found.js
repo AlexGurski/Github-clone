@@ -24,7 +24,7 @@ export const  Found = ({user}) => {
           setRepository(response.data)
            } catch (error) {
             setRepository(false)
-            console.error(error) 
+          //  console.error(error) 
         }
       }
 

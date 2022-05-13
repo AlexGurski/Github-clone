@@ -17,7 +17,6 @@ export const  FindedPage = () => {
     search(id)
   },[id])
 
-  
   const  search = async (id) =>{
     try {
     const response = await octokit.request(`GET /users/${id}`, {
@@ -28,7 +27,7 @@ export const  FindedPage = () => {
     setStatus(response.data)
         } catch (error) {
             setStatus(false)
-            console.error(error) 
+            //console.error(error) 
         }
   }
     
