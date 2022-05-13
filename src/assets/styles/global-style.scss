@@ -1,3 +1,5 @@
+$defaultColor: #0064EB;
+$adaptive-width: 780px;
 
 @font-face {
     font-family: 'Inter';
@@ -13,6 +15,7 @@
 body{
     background-color: #F9F9F9;
 }
+
 .container{
     width: 100%;
     height: calc(100vh - 72px);
@@ -29,6 +32,7 @@ body{
         @media screen and (max-width:720px) {
             margin-top: 10px;
         }
+
         margin-top: 42px;
         font-style: normal;
         font-weight: 400;

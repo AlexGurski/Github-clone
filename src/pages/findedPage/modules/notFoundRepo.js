@@ -6,7 +6,7 @@ export const  NotFoundRepo = () => {
     return(
             <div className="container_repo container">
                 <div className="container_group">
-                    <MdCancelPresentation  className="person"/>
+                    <MdCancelPresentation  className="no_person"/>
                     <span>Repository list is empty</span>
                 </div>
             </div>

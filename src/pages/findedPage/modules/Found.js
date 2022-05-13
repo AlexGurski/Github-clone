@@ -19,7 +19,7 @@ export const  Found = ({user}) => {
     return(
         <div className="found">
             <div className="found_user">
-                <img src={user.avatar_url}/>
+                <img src={user.avatar_url} alt="avatar"/>
                 <span className="found_user_name">{user.name}</span>
                 <a href={user.html_url} target="_blank" className="found_user_login">{user.login}</a>
                 <div className="found_user_folow">
@@ -31,9 +31,10 @@ export const  Found = ({user}) => {
                 {repository==='load'?
                     <PreloaderRepo/> :
                     repository.length > 0 ?
-                        <FoundRepo repository={repository} length={user.public_repos} nextPage={page => searchRepo(page, user.login).then( el =>setRepository(el))}/> :
+                        <FoundRepo repository={repository} length={user.public_repos} nextPage={page => searchRepo(page, user.login).then(el=>setRepository(el))}/> :
                         <NotFoundRepo/>}
             </div>
         </div>
     )
+    
 }

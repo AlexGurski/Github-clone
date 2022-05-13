@@ -1,5 +1,5 @@
 import React from "react";
-import './preloader.css'
+import '../assets/styles/preloader.css'
 
  const  Preloader = () => {
 
@@ -15,7 +15,7 @@ const  PreloaderRepo = () => {
 
     return(
         <div className="container">
-            <div className="loaderRepo"></div>
+            <div className="loader loaderRepo"></div>
         </div>
         
     )

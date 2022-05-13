@@ -6,7 +6,7 @@ export const  NotFound = () => {
     return(
             <div className="container ">
                 <div className="container_group">
-                    <RiUserLine className="person"/>
+                    <RiUserLine className="no_person"/>
                     <span>User not found</span>
                 </div>
             </div>
