@@ -1,7 +1,7 @@
 import React from "react";
-import '../../assets/styles/homepage-style.css'
+import '../assets/styles/homepage-style.css'
 
-export const  StartPage = () => {      
+export const  Homepage = () => {      
     return(
         <>
             <div className="container start">

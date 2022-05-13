@@ -1,11 +1,11 @@
 import React,{useEffect, useState} from "react";
-import '../../../assets/styles/finding-style.css'
+import '../assets/styles/finding-style.css'
 import {HiUsers, HiUser} from 'react-icons/hi'
 import { FoundRepo } from "./FoundRepo";
-import { PreloaderRepo } from "../../../modules/preloader";
-import { NotFoundRepo } from "./notFoundRepo";
-import { roundFollower } from "../../../modules/rounding";
-import { searchRepo } from "../../../modules/search";
+import { PreloaderRepo } from "./preloader";
+import { NotFoundRepo } from "./notFound";
+import { roundFollower } from "../modules/rounding";
+import { searchRepo } from "../modules/search";
 
 export const  Found = ({user}) => {
 

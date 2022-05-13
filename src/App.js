@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "./layouts/header";
-import { StartPage } from "./pages/startPage/startPage";
-import { FindedPage } from "./pages/findedPage/findedPage";
+import { Homepage } from "./pages/homepage";
+import { FindPage } from "./pages/findPage";
 
 import {Routes, Route} from 'react-router-dom'
 const App = () => {
@@ -9,8 +9,8 @@ const App = () => {
    <>
       <Header/>
       <Routes>
-        <Route path="/" element={ <StartPage/>}/>
-        <Route path="/:id" element={ <FindedPage/> }/>
+        <Route path="/" element={ <Homepage/>}/>
+        <Route path="/:id" element={ <FindPage/> }/>
       </Routes>
    </>
   );

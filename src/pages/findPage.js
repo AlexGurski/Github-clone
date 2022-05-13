@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import '../../assets/styles/finding-style.css'
+import '../assets/styles/finding-style.css'
 import { useParams} from 'react-router-dom'
-import { NotFound } from "./modules/notFound";
-import { Found } from "./modules/Found";
-import { Preloader } from "../../modules/preloader";
-import { searchUser } from "../../modules/search";
+import { NotFound } from "../components/notFound";
+import { Found } from "../components/FoundUser";
+import { Preloader } from "../components/preloader";
+import { searchUser } from "../modules/search";
 
-export const  FindedPage = () => {
+export const  FindPage = () => {
   const {id} =  useParams();
   const [status, setStatus] = useState('')
 

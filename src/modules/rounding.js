@@ -5,8 +5,4 @@ const roundFollower = (count) =>{
         return count
 }
 
-const roundRepos = (count) =>{
-   return Math.ceil(count/100)
-}
-
-export {roundFollower, roundRepos}
+export {roundFollower}

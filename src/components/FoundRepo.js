@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import '../../../assets/styles/finding-style.css'
+import '../assets/styles/finding-style.css'
 import ReactPaginate from 'react-paginate';
 import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 
