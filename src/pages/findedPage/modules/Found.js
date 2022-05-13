@@ -2,35 +2,18 @@ import React,{useEffect, useState} from "react";
 import '../../../assets/styles/finding-style.css'
 import {HiUsers, HiUser} from 'react-icons/hi'
 import { FoundRepo } from "./FoundRepo";
-import { Octokit } from "octokit";
 import { PreloaderRepo } from "../../../modules/preloader";
 import { NotFoundRepo } from "./notFoundRepo";
 import { roundFollower } from "../../../modules/rounding";
-
-const octokit = new Octokit();
+import { searchRepo } from "../../../modules/search";
 
 export const  Found = ({user}) => {
 
     const [repository,setRepository] = useState([]);
 
-    const  searchRepo = async (page, login=user.login ) =>{
-        try {
-        const response = await octokit.request(`GET /users/${login}/repos`, {
-            username: login,
-            per_page:4,
-            page:page,
-            sort:'pushed',
-          })
-          setRepository(response.data)
-           } catch (error) {
-            setRepository(false)
-          //  console.error(error) 
-        }
-      }
-
     useEffect(()=>{
             setRepository('load');
-            searchRepo(1, user.login) 
+            searchRepo(1, user.login).then(el=>setRepository(el))
     },[user])
 
     return(
@@ -48,7 +31,7 @@ export const  Found = ({user}) => {
                 {repository==='load'?
                     <PreloaderRepo/> :
                     repository.length > 0 ?
-                        <FoundRepo repository={repository} length={user.public_repos} nextPage={(page)=>searchRepo(page)}/> :
+                        <FoundRepo repository={repository} length={user.public_repos} nextPage={page => searchRepo(page, user.login).then( el =>setRepository(el))}/> :
                         <NotFoundRepo/>}
             </div>
         </div>
