@@ -17,6 +17,7 @@ export const  FindedPage = () => {
     search(id)
   },[id])
 
+  
   const  search = async (id) =>{
     try {
     const response = await octokit.request(`GET /users/${id}`, {
