@@ -4,9 +4,9 @@ import ReactPaginate from 'react-paginate';
 import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 
 export const  FoundRepo = ({repository, length, nextPage}) => {
-
-    const [currentPage, setCurrentPage] = useState({first:1, last:length<4?length:4 })
     
+    const [currentPage, setCurrentPage] = useState({first:1, last:length<4?length:4 })
+
     const handlePageClick = (event) => {
         nextPage(event.selected+1)
         const curr = event.selected*4+1;
