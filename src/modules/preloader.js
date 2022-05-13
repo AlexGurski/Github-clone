@@ -1,7 +1,7 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import './preloader.css'
 
-export const  Preloader = () => {
+ const  Preloader = () => {
 
     return(
         <div className="container">
@@ -10,3 +10,14 @@ export const  Preloader = () => {
         
     )
 }
+
+const  PreloaderRepo = () => {
+
+    return(
+        <div className="container">
+            <div className="loaderRepo"></div>
+        </div>
+        
+    )
+}
+export {Preloader, PreloaderRepo}

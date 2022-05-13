@@ -3,7 +3,7 @@ import '../finding-style.css'
 import {HiUsers, HiUser} from 'react-icons/hi'
 import { FoundRepo } from "./FoundRepo";
 import { Octokit } from "octokit";
-import { Preloader } from "../../../modules/preloader";
+import { PreloaderRepo } from "../../../modules/preloader";
 import { NotFoundRepo } from "./notFoundRepo";
 import { roundFollower } from "../../../modules/rounding";
 import { roundRepos } from "../../../modules/rounding";
@@ -46,7 +46,7 @@ export const  Found = (props) => {
                 </div>
             </div>
             <div className="found_repo">
-                {repository==='load'?<Preloader/>:repository.length>0?<FoundRepo repository={repository} length={props.user.public_repos} nextPage={(page)=>searchRepo(page)}/>:<NotFoundRepo/>}
+                {repository==='load'?<PreloaderRepo/>:repository.length>0?<FoundRepo repository={repository} length={props.user.public_repos} nextPage={(page)=>searchRepo(page)}/>:<NotFoundRepo/>}
             </div>
         </div>
     )

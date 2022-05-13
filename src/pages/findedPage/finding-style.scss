@@ -8,6 +8,13 @@
     height: 100%;
     display: flex;
     padding: 0 56px;
+    @media screen and (max-width:720px) {
+        flex-direction: column;
+        align-items: center;
+        &_user{
+            width: 90%;
+        }
+    }
     &_user{
         margin-top: 55px;
         display: flex;
@@ -61,6 +68,9 @@
         width: 100%;
         height: 100%;      
         padding: 28px 0 0 96px;
+        @media screen and (max-width:720px) {
+            padding: 0;
+        }
     }
 }
 .repository{
@@ -72,6 +82,15 @@
         font-weight: 600;
         font-size: 32px;
         line-height: 130%;
+        @media screen and (max-width:720px) {
+            padding-top: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        @media screen and (max-width:360px) {
+            padding-top: 20px;
+            font-size: 18px;
+        }
     }
     &_container{
         margin-top: 28px;
@@ -89,6 +108,9 @@
         height: 112px;
         padding: 24px 32px;
         margin-bottom: 24px;
+        @media screen and (max-width:720px) {
+            height: auto;;
+        }
         &_name{
             font-family: 'Inter';
             font-style: normal;
@@ -161,15 +183,13 @@ li a {
     border-radius: 3px;
     pointer-events: none;
 }
-.repo-not-found{
-    width: 243px;
-height: 165px;
-left: 751px;
-top: 269px;
+.container_repo{
+    height: 90% !important;
+
 }
 .person{
     width:76px;
-    height:62px;
-    top:320px;
     padding: 0;
 }
+
+
