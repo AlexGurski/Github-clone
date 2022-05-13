@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import './finding-style.css'
+import '../../assets/styles/finding-style.css'
 import { useParams} from 'react-router-dom'
 import { NotFound } from "./modules/notFound";
 import { Found } from "./modules/Found";
 import { Preloader } from "../../modules/preloader";
 import { Octokit } from "octokit";
+
 export const  FindedPage = () => {
     
     const {id} =  useParams();
@@ -24,6 +25,7 @@ export const  FindedPage = () => {
             console.error(error) 
         }
       }
+      
      useEffect(()=>{
          setStatus('load');
          search(id)

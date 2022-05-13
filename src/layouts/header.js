@@ -1,5 +1,5 @@
 import React from "react";
-import "./header-style.css"
+import "../assets/styles/header-style.css"
 import {useNavigate, Link}  from 'react-router-dom'
 import {FaGithub} from 'react-icons/fa';
 import {FiSearch} from'react-icons/fi';

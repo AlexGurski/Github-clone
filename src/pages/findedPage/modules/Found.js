@@ -1,12 +1,11 @@
 import React,{useEffect, useState} from "react";
-import '../finding-style.css'
+import '../../../assets/styles/finding-style.css'
 import {HiUsers, HiUser} from 'react-icons/hi'
 import { FoundRepo } from "./FoundRepo";
 import { Octokit } from "octokit";
 import { PreloaderRepo } from "../../../modules/preloader";
 import { NotFoundRepo } from "./notFoundRepo";
 import { roundFollower } from "../../../modules/rounding";
-import { roundRepos } from "../../../modules/rounding";
 
 const octokit = new Octokit();
 

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import './homepage-style.css'
+import React from "react";
+import '../../assets/styles/homepage-style.css'
 
 export const  StartPage = () => {      
     return(

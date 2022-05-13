@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "./modules/header";
+import { Header } from "./layouts/header";
 import { StartPage } from "./pages/startPage/startPage";
 import { FindedPage } from "./pages/findedPage/findedPage";
-import './StylesGlobal/global-style.css'
+import './assets/styles/global-style.css'
 import {Routes, Route, Link} from 'react-router-dom'
-function App() {
+const App = () => {
   return (
    <>
       <Header/>

@@ -1,5 +1,5 @@
 import React from "react";
-import '../finding-style.css'
+import '../../../assets/styles/finding-style.css'
 import {RiUserLine} from 'react-icons/ri'
 export const  NotFound = () => {      
     return(
