@@ -17,7 +17,7 @@ export const  FindPage = () => {
   },[id])
 
   return(
-        <div className="accept">
+        <div className="find_page">
             {status === 'load' ? 
                 <Preloader/> :
                 status ? 

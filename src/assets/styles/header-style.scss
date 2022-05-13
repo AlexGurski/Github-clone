@@ -1,3 +1,6 @@
+$adaptive-width-header:600px;
+$defaultColor: #0064EB;
+$adaptive-width: 780px;
 .header{
     width: 100%;
     height: 72px;
@@ -8,7 +11,7 @@
             font-size: 40px;
             color: white;
             margin-left: 41px;
-            @media screen and (max-width:600px) {
+            @media screen and (max-width:$adaptive-width-header) {
                 margin-left: 10px;
             }
         }
@@ -21,7 +24,7 @@
             align-items: center;
             border-radius: 6px;
             background-color: white;
-            @media screen and (max-width:600px) {
+            @media screen and (max-width:$adaptive-width-header) {
                 width: calc(100% - 140px);
             }
             &_icon{
